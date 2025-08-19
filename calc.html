@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator App</title>
+
+  <style>
+    h1 {
+      color: rgba(170, 207, 136);
+      text-align: center;
+      background-color: rgba(24, 36, 18);
+      border-radius: 5px;
+    }
+
+    p {
+      font-size: x-large;
+      color: rgba(24, 36, 18);
+    }
+
+    body {
+      color: rgba(24, 36, 18);
+      text-align: center;
+      background-color: rgba(170, 207, 136);
+    }
+
+    input {
+      background-color: rgba(217, 250, 190);
+      color: rgba(24, 36, 18);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1> Calculator App</h1>
+
+  <form>
+    <label for="fnumber">First Number:</label><br>
+    <input type="number" id="fnumber" name="fnumber"><br>
+    <label for="snumber">Second Number:</label><br>
+
+    <input type="number" id="snumber" name="snumber">
+    <p id="result"> Result : </p>
+
+    <input type="button" id="add" value="Add">
+    <input type="button" id="sub" value="Substract">
+    <input type="button" id="mul" value="Multiply">
+    <input type="button" id="div" value="Divide">
+
+  </form>
+
+  <script>
+
+    const add_button = document.getElementById('add');
+    const sub_button = document.getElementById('sub');
+    const mul_button = document.getElementById('mul');
+    const div_button = document.getElementById('div');
+
+    const result = document.getElementById('result');
+
+
+    add_button.addEventListener("click", () => {
+      const first_number = document.getElementById('fnumber').value;
+      const second_number = document.getElementById('snumber').value;
+
+      answer = Number(first_number) + Number(second_number);
+      console.log(answer)
+      result.textContent = "Result : " + answer;
+    })
+
+    sub_button.addEventListener("click", () => {
+      const first_number = document.getElementById('fnumber').value;
+      const second_number = document.getElementById('snumber').value;
+
+      answer = Number(first_number) - Number(second_number);
+      console.log(answer)
+      result.textContent = "Result : " + answer;
+    })
+
+    mul_button.addEventListener("click", () => {
+      const first_number = document.getElementById('fnumber').value;
+      const second_number = document.getElementById('snumber').value;
+
+      answer = Number(first_number) * Number(second_number);
+      console.log(answer)
+      result.textContent = "Result : " + answer;
+    })
+
+    div_button.addEventListener("click", () => {
+      const first_number = document.getElementById('fnumber').value;
+      const second_number = document.getElementById('snumber').value;
+
+      answer = Number(first_number) / Number(second_number);
+      console.log(answer)
+      result.textContent = "Result : " + answer;
+    })
+
+  </script>
+
+</body>
+</html>
+
+
